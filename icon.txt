@@ -1,0 +1,33 @@
+icon designed by Freepik from flaticon
+
+
+
+fonts:
+  - family: Raleway
+    fonts:
+      - asset: fonts/Raleway-Regular.ttf
+      - asset: fonts/Raleway-Italic.ttf
+        style: italic
+  - family: RobotoMono
+    fonts:
+      - asset: fonts/RobotoMono-Regular.ttf
+      - asset: fonts/RobotoMono-Bold.ttf
+        weight: 700
+  - family: NotoSans
+    fonts:
+      - asset: fonts/NotoSans-Regular.ttf
+      - asset: fonts/NotoSans-Bold.ttf
+        weight: 700
+
+assets:
+    - assets/car.png
+    - assets/ecar.png
+    - assets/emoto.png
+    - assets/moto.png
+    - assets/public_park.png
+    - assets/street_park.png
+    - assets/parkicon.png
+    - assets/stat.png
+    - assets/all.png
+    - assets/placeholder.png
+    - assets/search.png
