@@ -1,19 +1,23 @@
+# name of workflow
 name: Build Web
 
+# Auto trigger on push to master branch
 on:
   push:
     branches: [ master ]
 
+# Workflow run consists of jobs, job runs-on an environment
 jobs:
   build:
     runs-on: ubuntu-latest
 
-steps:
-  - uses: actions/checkout@v3
-  - uses: subosito/flutter-action@v2
-    with:
-      channel: 'stable'
-  - uses: erickzanardo/flutter-gh-pages@v7
-    with:
-      customArgs: --dart-define SBKey=${{ secrets.SB_KEY }}
-      basehref: /eyesquare_gh_pages/
+    # A job contains steps
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - uses: erickzanardo/flutter-gh-pages@v7
+        with:
+          customArgs: --dart-define SBKey=${{ secrets.SB_KEY }} # Add this line
+          basehref: /eyesquare_gh_pages/
