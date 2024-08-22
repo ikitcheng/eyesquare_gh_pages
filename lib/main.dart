@@ -67,12 +67,12 @@ Future<void> main() async {
     anonKey = dotenv.env['anonKey'] ?? '';
   }
 */
-const String anonKey = String.fromEnvironment("SBKey", defaultValue: '');
-const String baseUrl = String.fromEnvironment("SBUrl", defaultValue: '');
+//const String anonKey = String.fromEnvironment("SBKey", defaultValue: '');
+//const String baseUrl = String.fromEnvironment("SBUrl", defaultValue: '');
   try {
     await Supabase.initialize(
-      url: baseUrl,
-      anonKey: anonKey,
+      url: const String.fromEnvironment("SBUrl", defaultValue: ''),
+      anonKey: const String.fromEnvironment("SBKey", defaultValue: ''),
 
     );
 
