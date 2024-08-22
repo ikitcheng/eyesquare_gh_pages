@@ -8,7 +8,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:math';
 import 'package:intl/intl.dart';
-import 'package:parking_app/env.dart';
 //import 'package:encrypt/encrypt.dart' as encrypt;
 //import 'package:flutter_dotenv/flutter_dotenv.dart';
 //import 'dart:io' show Platform;
@@ -68,8 +67,8 @@ Future<void> main() async {
     anonKey = dotenv.env['anonKey'] ?? '';
   }
 */
-String anonKey = EnvService.SBKey;
-String baseUrl = 'https://vrctwvzevjjeiklznzkw.supabase.co';
+const String anonKey = String.fromEnvironment("SBKey", defaultValue: '');
+const String baseUrl = String.fromEnvironment("SBUrl", defaultValue: '');
   try {
     await Supabase.initialize(
       url: baseUrl,

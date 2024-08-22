@@ -19,5 +19,5 @@ jobs:
           channel: 'stable'
       - uses: erickzanardo/flutter-gh-pages@v7
         with:
-          customArgs: --dart-define SBKey=${{ secrets.SB_KEY }} # Add this line
+          customArgs: --dart-define SBKey=${{ secrets.SB_KEY }} --dart-define SBUrl==${{ secrets.SB_URL }} # Add this line
           basehref: /eyesquare_gh_pages/
